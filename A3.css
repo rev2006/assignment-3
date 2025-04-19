@@ -44,6 +44,20 @@
   }
   */
 
+nav{
+    display: flex;
+}
+#title{
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+}
+
+#title,#nav_icon{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
 body{
     background-color:#a3d1db ;
 }
@@ -53,3 +67,4 @@ h1,h2,h3,h4,h5,p{
     font-style: normal;
     color: #142d33;
 }
+
