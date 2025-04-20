@@ -43,23 +43,93 @@
     font-style: normal;
   }
   */
+/* colors palette
+grey #9eadb1
+greenish-grey #64838a
+base blue #a3d1db
+green/blue #395e66
+dark green/blue #142d33
+*/
 
-nav{
+
+/* nav desktop */
+header{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(#395e66,#a3d1db);
+    height: 70px;
 }
 #title{
     font-family: Arial, sans-serif;
     font-weight: 800;
+    text-align: left;
+    color: #142d33;
+    text-decoration: none;
+    font-size: 25px;
+    
 }
 
-#title,#nav_icon{
+
+
+#nav_s{
+    padding: 10px;
+    margin: 20px;
+    justify-content: start;
+
+}
+#title{
+  margin-left: 10px;
+  margin-right: 0px;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+#nav_right{
     display: flex;
     align-items: center;
-    padding: 10px;
-    margin: 10px;
+    gap: 20px;
 }
+#nav_p{
+  padding-left: 10px;
+  margin-left: 20px;
+}
+#nav_c{
+    margin-right: 30px;
+}
+
+#nav_link{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+#nav_link > a {
+  font-family: 'Montserrat Alternates';
+  font-weight: 800;
+  font-style: normal;
+  color: #142d33;
+  text-decoration: none;
+  margin: 5px;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  
+
+}
+
+
+
+
+
+
+
+
+
 body{
     background-color:#a3d1db ;
+    margin: 0; /* so header fills pages */
 }
 h1,h2,h3,h4,h5,p{
     font-family: 'Montserrat Alternates';
@@ -67,4 +137,5 @@ h1,h2,h3,h4,h5,p{
     font-style: normal;
     color: #142d33;
 }
+
 
