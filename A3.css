@@ -124,7 +124,8 @@ header{
 body{
     background-color:#a3d1db ;
     margin: 0; /* so header fills pages */
-
+    background-image: url("Icons & elements/background_icons.png");
+    background-repeat: repeat;
 
 
 h1{
@@ -148,6 +149,8 @@ h2,h3,h4,h5,p{
 
 /* HOME PAGE*/
 #homepage{
+
+  /*first section */
   #hp_first{
     display: flex;
     justify-content: center;
@@ -178,5 +181,6 @@ h2,h3,h4,h5,p{
     margin-bottom: 3vw;
     font-size: 40px;
   }
+  /*second section */
 }
 
