@@ -140,9 +140,26 @@ h2,h3,h4,h5,p{
     font-style: normal;
     color: #142d33;
 }
+.prod {
+  aspect-ratio: 11/ 16;
+  width: 15%; /* or a fixed width like 200px */
+  object-fit: cover;
+  display: block;
+  border: #395e66 solid 5px;
+  border-bottom: #395e66 solid 50px;
+  border-radius: 10px;
+  margin: 2vw;
+  
+
+}
+.prod:hover {
+  border-color: #142d33;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
 
 #border{
-  border: #395e66 solid 10px;
+  border: #395e66 solid 15px;
 }
 }
 
@@ -182,5 +199,12 @@ h2,h3,h4,h5,p{
     font-size: 40px;
   }
   /*second section */
+  #L_I_T, #T_S{
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+
 }
 
