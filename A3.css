@@ -222,6 +222,14 @@ h2,h3,h4,h5,p{
   overflow: hidden;
   width: 80vw;
 }
+#scroll_cont1{
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 2vw;
+  padding: 1vw 0;
+ }
 }
 
 
@@ -270,19 +278,22 @@ h2,h3,h4,h5,p{
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+
+ }
+ #TS_items{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
   gap: 20px;
   padding: 10px;
 
  }
  
-#scroll_cont1{
-  display: flex;
-  justify-content: center;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 2vw;
-  padding: 1vw 0;
- }
+
 
 
 }
