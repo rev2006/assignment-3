@@ -229,6 +229,7 @@ h2,h3,h4,h5,p{
   scroll-behavior: smooth;
   gap: 2vw;
   padding: 1vw 0;
+  margin-bottom: 7vw;
  }
 }
 
@@ -292,8 +293,38 @@ h2,h3,h4,h5,p{
   padding: 10px;
 
  }
- 
 
+ #T_S,#L_I_T{
+  margin-top: 7vw;
+ }
+
+ #hp_cat_link{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 7vw;
+ }
+
+#category_hp{
+  aspect-ratio: 1 / 1;
+  width: 28%; 
+  display: flex; 
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1vw;
+  flex-shrink: 0;
+  text-decoration: none; 
+}
+#category_hp img {
+  border: #395e66 solid 5px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius:5px;
+  display: block;
+}
 
 
 }
