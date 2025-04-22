@@ -144,13 +144,14 @@ h2,h3,h4,h5,p{
 /* larger linked product container <a> */
 .prod {
   aspect-ratio: 11 / 16;
-  width: 15%; 
+  width: 20%; 
   display: flex; 
+  display: block;
   justify-content: center;
   align-items: center;
   border: #395e66 solid 5px;
   border-radius: 10px;
-  margin: 2vw;
+  margin: 1vw;
   flex-shrink: 0;
   text-decoration: none; 
   transition: transform 0.5s, border-color 0.5s, background-color 0.5s;
@@ -190,6 +191,36 @@ h2,h3,h4,h5,p{
 
 #border{
   border: #395e66 solid 15px;
+}
+
+/*scroll bar*/
+.scroll::-webkit-scrollbar{
+  height: 10px;
+ }
+
+ .scroll::-webkit-scrollbar-track {
+  background: #64838a;
+  border-radius: 10px; 
+}
+.scroll::-webkit-scrollbar-thumb {
+  background: #395e66; 
+  border-radius: 10px;
+}
+
+
+.scroll_button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+.scroll_button img{
+  width: 15px;
+  height: auto;
+}
+.scroll_vp{
+  overflow: hidden;
+  width: 80vw;
 }
 }
 
@@ -241,9 +272,17 @@ h2,h3,h4,h5,p{
   overflow-x: auto;
   gap: 20px;
   padding: 10px;
- }
- #LIT_items a {
-  display: block;
-}
-}
 
+ }
+ 
+#scroll_cont1{
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 2vw;
+  padding: 1vw 0;
+ }
+
+
+}
