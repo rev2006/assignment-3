@@ -362,7 +362,11 @@ button{
   border-radius:5px;
   display: block;
 }
-
+#box_link:hover{
+  border-color: #142d33;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
 
 }
 
@@ -427,5 +431,11 @@ text-align: center;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
+  }
+}
+
+#mens_swimwear{
+  h1{
+    text-align: center;
   }
 }
