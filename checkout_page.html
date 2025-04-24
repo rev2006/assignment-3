@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="A3.css">
     <script src="A3.js"></script>
-    <title>Profile page</title>
+    <title>Checkout</title>
 </head>
 <header>
     <div id="nav_left">
@@ -34,22 +34,23 @@
         </a>
     </div>
 </header>
-<body id="profilePage">
-    <h1 id="page_title">FUNKY<br>TRUNKS</h1>
-    <h1>Sign in to your account</h1>
-    <form id="profile_form" action="">
-        <div id="form_group">
-            <label for="email">E-mail address</label>
-            <input type="email" name="email" id="profile_email" placeholder="E-mail address"> <br>
+<body id="checkout_page">
+    <h1>PAYMENT</h1>
+    <div id="detail_layout">
+        <div id="details">
+            <h2>Card details</h2>
+            <form action="">
+                <input type="number" name="card_num" id="card_num" placeholder="E-mail address"> <br>
+                <input type="password" name="password" id="profile_password" placeholder="Password"><br>        
+            </form>
         </div>
-        <div id="form_group">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="profile_password" placeholder="Password"><br>
-        </div>
+        <div id="border_vert"></div>
+        <div id="details">
+            <h2>Personal details</h2>
+            <form action="">
 
-        <button>Sign in</button>
-    </form>
-    <a id="FP" href="">Forgot password</a> <br></br>
-    <a id="CA" href="">Create account</a>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
