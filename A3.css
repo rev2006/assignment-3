@@ -325,6 +325,7 @@ body{
     margin-top: 0.2em;
     padding: 0.5em;
     box-sizing: border-box;
+    font-size: 15px;
   }
 
   label{
@@ -338,7 +339,7 @@ body{
   #form_group{
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* aligns label with input */
+    align-items: flex-start;
     margin-bottom: 1em;
   }
   input:focus, input:hover {
@@ -505,7 +506,7 @@ text-align: center;
 
   #checkout_NA{
     background-color: #64838a;
-    display: block;          /* buttons are inline by default */
+    display: block; 
     margin: 0 auto; 
     margin-bottom: 3vw;
     margin-top: 3vw;
@@ -541,6 +542,7 @@ text-align: center;
     font-weight: 800;
     font-style: normal;
     font-size: 35px;
+    text-align: center;
   }
 
   #detail_layout{
@@ -550,9 +552,46 @@ text-align: center;
 
   #border_vert{
     border: #395e66 solid 0.25vw;
-    height: 300px;
+    height: 250px;
     justify-self: center;
     margin-top: 7vw;
     margin-bottom: 1vw;
+  }
+
+  #card_num, #card_name, #email_deets, #number_deets, #address{
+    width: 500px;
+    height: 40px;
+  }
+
+  #card_ex, #card_cvc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1em;
+  }
+
+  #sub_input_row{
+    display: flex;
+    gap: 101px;
+
+  }
+  #sub_input{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #pay_button{
+    display: flex;
+    justify-self: center;
+    margin-top: 2vw;
+    text-decoration: none;
+  }
+}
+
+#confirmation_page{
+  text-align: center;
+
+  h1,h2,p{
+    margin: 50px;
   }
 }
