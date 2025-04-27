@@ -58,16 +58,82 @@
     </div>
 
     <div id="below_prod">
-        <select name="Size" id="size">
-            <option value="xs">XS</option>
-            <option value="s">S</option>
-            <option value="m">M</option>
-            <option value="l">L</option>
-            <option value="xl">XL</option>
-        </select>
-        <p>I'm often referred to as the GOAT. Once you put me on, you'll understand why.</p>
-        <button id="add_to_cart">Add to cart</button>
+        <div class="side">
+            <select name="Size" id="size">
+                <option value="" disabled selected>Size</option>
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+        <h3>I'm often referred to as the GOAT. <br> Once you put me on, you'll understand why.</h3>
+        <div class="side">
+            <button id="add_to_cart" class="primary_button">Add to cart</button>
+        </div>
     </div>
     <div id="border"></div>
+    <div class="review_section">
+        <button id="scroll_l" class="scroll_button"><img src="Icons & elements/left_button_icon.png" alt=""></button>
+        <div id="reviews" class="scroll">
+            <div id="review">
+                <div id="stars_section">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                </div>
+                <h3>Dutch Van Der Linde</h3>
+                <p>Fantastic product. Fits perfectly and looks really good. Bringing this to Tahiti! </p>
+            </div>
+            <div id="review">
+                <div id="stars_section">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                    <img id="star" src="Icons & elements/star_icon.png" alt="">
+                </div>
+                <h3>John Marston</h3>
+                <p>This is great. Bought it for myself, might buy one for my son! </p>
+            </div>
+        </div>
+        <button id="scroll_r" class="scroll_button"><img src="Icons & elements/right_button_icon.png" alt=""></button>   
+
+    </div>
+
+    <a id="write_review" href="">
+        <h3 >Write a review</h3>
+    </a>
+
+    <div id="border"></div>
+
+    <div class="may_also_like">
+        <h2>You may also like</h2>
+        <div id="prod_list4x1">
+            <a class="prod" href="art_snob.html">
+                <img id="LIT1"  src="photos/Men's/art_snob.jpg" alt="">
+                <p class="prod_lab_n">Art snob</p>
+                <p class="prod_lab">$54.95</p>
+            </a>
+            <a class="prod" href="">
+                <img id="LIT2"  src="photos/Men's/bolted.jpg" alt="">
+                <p class="prod_lab_n">Bolted</p>
+                <p class="prod_lab">$54.95</p>
+            </a>
+            <a class="prod" href="">
+                <img id="LIT3"  src="photos/Men's/tetra_tonic.jpg" alt="">         
+                <p class="prod_lab_n">Tetra tonic</p>
+                <p class="prod_lab">$54.95</p>
+            </a>
+            <a class="prod" href="">
+                <img id="LIT4"  src="photos/Men's/the_climb.jpg" alt="">    
+                <p class="prod_lab_n">The climb</p>
+                <p class="prod_lab">$54.95</p>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
