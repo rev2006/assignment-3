@@ -21,14 +21,53 @@ document.addEventListener('DOMContentLoaded', () => {
 //home page 
 
 //scrolling
+
+//scrolling homepage items
 const scrollLIT = document.getElementById('LIT_items');
+const scrollTS = document.getElementById('TS_items');
 const scrollAm = 300;
-document.getElementById("scroll_l").addEventListener("click", () => {
-    scrollLIT.scrollBy({left: -scrollAm, behavior:"smooth"});
-});
-document.getElementById("scroll_r").addEventListener("click", () => {
-    scrollLIT.scrollBy({left: scrollAm, behavior:"smooth"});
-});
+const leftButtons = document.getElementsByClassName("scroll_button_l");
+const rightButtons = document.getElementsByClassName("scroll_button_r");
+
+for (let i = 0; i < leftButtons.length; i++) {
+    leftButtons[i].addEventListener("click", () => {
+        if (i === 0) {
+            scrollLIT.scrollBy({left: -scrollAm, behavior: "smooth"});
+        } else {
+            scrollTS.scrollBy({left: -scrollAm, behavior: "smooth"});
+        }
+    });
+}
+for (let i = 0; i < rightButtons.length; i++) {
+    rightButtons[i].addEventListener("click", () => {
+        if (i === 0) {
+            scrollLIT.scrollBy({left: scrollAm, behavior: "smooth"});
+        } else {
+            scrollTS.scrollBy({left: scrollAm, behavior: "smooth"});
+        }
+    });
+}
+//scrolling product page items
+const scrollProd = document.getElementById('photos_list');
+const scrollReviews = document.getElementById('reviews');
+for (let i = 0; i < leftButtons.length; i++) {
+    leftButtons[i].addEventListener("click", () => {
+        if (i === 0) {
+            scrollProd.scrollBy({left: -scrollAm, behavior: "smooth"});
+        } else {
+            scrollReviews.scrollBy({left: -scrollAm, behavior: "smooth"});
+        }
+    });
+}
+for (let i = 0; i < rightButtons.length; i++) {
+    rightButtons[i].addEventListener("click", () => {
+        if (i === 0) {
+            scrollProd.scrollBy({left: scrollAm, behavior: "smooth"});
+        } else {
+            scrollReviews.scrollBy({left: scrollAm, behavior: "smooth"});
+        }
+    });
+}
 
 
 

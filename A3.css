@@ -273,7 +273,7 @@ body{
     display: block;
   }
   /*labels underneath container*/
-  .prod_lab, .prod_lab_n {
+  .prod_lab, .prod_lab_n, .prod_cat {
     background-color: #395e66;
     color: #9eadb1;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -289,6 +289,9 @@ body{
   .prod_lab_n{
     font-size: 1.5vw;
   }
+  .prod_cat{
+    font-size: 0.8vw;
+  }
   .prod:hover {
     border-color: #142d33;
     transform: scale(1.05);
@@ -299,11 +302,11 @@ body{
     transform: scale(1.05);
     transition: 0.5s;
   }
-  .prod:hover .prod_lab, .prod:hover .prod_lab_n {
+  .prod:hover .prod_lab, .prod:hover .prod_lab_n, .prod:hover .prod_cat {
     background-color: #142d33;
     transition: 0.5s;
   }
-  .prod_hp:hover .prod_lab, .prod_hp:hover .prod_lab_n {
+  .prod_hp:hover .prod_lab, .prod_hp:hover .prod_lab_n, .prod_hp:hover .prod_cat {
     background-color: #142d33;
     transition: 0.5s;
   }
@@ -313,27 +316,27 @@ body{
   }
 
   /*scroll bar*/
-  .scroll::-webkit-scrollbar, .photos_list::-webkit-scrollbar{
+  .scroll::-webkit-scrollbar, #photos_list::-webkit-scrollbar{
     height: 0.8vw;
   }
 
-  .scroll::-webkit-scrollbar-track, .photos_list::-webkit-scrollbar-track {
+  .scroll::-webkit-scrollbar-track, #photos_list::-webkit-scrollbar-track {
     background: #64838a;
     border-radius: 0.8vw; 
   }
-  .scroll::-webkit-scrollbar-thumb, .photos_list::-webkit-scrollbar-thumb {
+  .scroll::-webkit-scrollbar-thumb, #photos_list::-webkit-scrollbar-thumb {
     background: #395e66; 
     border-radius: 1vw;
   }
 
 
-  .scroll_button{
+  .scroll_button_l, .scroll_button_r,.scroll_button{
     background: none;
     border: none;
     cursor: pointer;
     display: inline-block;
   }
-  .scroll_button img{
+  .scroll_button_l img, .scroll_button_r img, .scroll_button img{
     width: 1.3vw;
     height: auto;
   }
@@ -341,7 +344,7 @@ body{
     overflow: hidden;
     width: 80vw;
   }
-  #scroll_cont1{
+  .scroll_cont1{
     display: flex;
     justify-content: center;
     overflow-x: auto;
@@ -616,7 +619,7 @@ text-align: center;
   }
 }
 
-#mens_swimwear{
+#prod_listing_page{
   h1{
     text-align: center;
   }
@@ -709,7 +712,7 @@ text-align: center;
     margin-top: 0px;
     scroll-snap-align: center;
   }
-  .photos_list{
+  #photos_list{
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -724,7 +727,7 @@ text-align: center;
     justify-self: center;
     scroll-snap-type: x mandatory;
   }
-  .prod_pics{
+  #prod_pics{
     display: flex;
     justify-self: center;
   }
@@ -771,7 +774,7 @@ text-align: center;
     }
   }
 
-  .review_section{
+  #review_section{
     display: flex;
     justify-content: space-around;
     align-items: center;
