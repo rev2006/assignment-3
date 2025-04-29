@@ -304,10 +304,12 @@ body{
   }
   .prod:hover .prod_lab, .prod:hover .prod_lab_n, .prod:hover .prod_cat {
     background-color: #142d33;
+    transform: scale(1.02);
     transition: 0.5s;
   }
   .prod_hp:hover .prod_lab, .prod_hp:hover .prod_lab_n, .prod_hp:hover .prod_cat {
     background-color: #142d33;
+    transform: scale(1.02);
     transition: 0.5s;
   }
 
