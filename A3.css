@@ -168,12 +168,12 @@ header{
       top: 0;
       left: -60vw;
       width: 40vw;
-      height: 120vw;
+      height: 200vw;
       background-color: #64838a;
       display: flex;
       flex-direction: column;
       padding: 3vw;
-      gap: 4vw;
+      gap: 7vw;
       transition: left 0.4s ease;
       z-index: 1000;
 
@@ -372,6 +372,7 @@ body{
     margin: 0 auto;
   }
 
+  /*button*/
   .primary_button{
     background-color: #142d33;
     color: #9eadb1;
@@ -412,7 +413,7 @@ body{
     font-size: 1.4vw;
   }
 
-  
+  /*input*/
   input{
     background-color: #9eadb1;
     border: none;
@@ -750,12 +751,34 @@ text-align: center;
     margin-top: 3vw;
     margin-bottom: 3vw;
 
-    #size{
+    .side{
       margin-left: 4vw;
     }
+
+    .side_button{
+      position: relative;
+    }
+
+    
     #add_to_cart{
       margin-right: 4vw;
       margin-left: auto;
+      display: none;
+    }
+    #add_to_cart_disabled{
+      margin-right: 4vw;
+      margin-left: auto;
+      background-color: #64838a;
+      color: #9eadb1;
+      border: none;
+      border-radius: 1vw;
+      width: 17vw;
+      height: 3.8vw;
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+      font-size: 2vw;
+      display: block;
     }
     #size{
       width: 6vw;
