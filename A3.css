@@ -595,8 +595,10 @@ text-align: center;
     margin-top: 5vw;
     margin-bottom: 5vw;
   }
-
-  #checkout_NA{
+  #checkout_buttons{
+    position: relative;
+  }
+  #checkout_NA, #checkout_ok{
     border: none;
     border-radius: 1vw;
     width: 17vw;
@@ -608,11 +610,20 @@ text-align: center;
     margin: 1vw;
     background-color: #64838a;
     color: #9eadb1;
-    display: block; 
     margin: 0 auto; 
     margin-bottom: 3vw;
     margin-top: 3vw;
+
   }
+  #checkout_NA{
+    display: block;
+  }
+  #checkout_ok{
+    background-color:#142d33;
+    display: none;
+  }
+
+
 
   #most_bought{
     font-size: 1.8vw;

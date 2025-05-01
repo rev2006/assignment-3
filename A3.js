@@ -70,21 +70,63 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    //intialize array of products in cart
+    let cart = [];
+    let numberOfItems = 0;
 
     //product page
     //add to cart disabled
-    const sizeSelect = document.getElementById("size");
-    const addButton = document.getElementById("add_to_cart");
-    const addButtonDisabled = document.getElementById("add_to_cart_disabled");
+    if(document.body.classList.contains("prod_pages")){
+        const sizeSelect = document.getElementById("size");
+        const addButton = document.getElementById("add_to_cart");
+        const addButtonDisabled = document.getElementById("add_to_cart_disabled");
 
-    sizeSelect.addEventListener("change", function(){
-        if (sizeSelect.value !== ""){
-            addButton.style.display = "block";
-            addButtonDisabled.style.display = "none";
+        sizeSelect.addEventListener("change", function(){
+            if (sizeSelect.value !== ""){
+                addButton.style.display = "block";
+                addButtonDisabled.style.display = "none";
+            }
+        });
+    
+        //adding to cart
+        // information of required products
+        addButton.addEventListener("click", function(){
+            let productName = product_name.textContent;
+            let price_str = product_price.textContent;
+            let productPrice = parseFloat(price_str.replace("$", ""));
+            let productSize = document.getElementById("size").value;
+            //add values to array
+            cart[numberOfItems] = [productName,productPrice, productSize];
+            numberOfItems ++;
+        } );
+    }
+
+
+
+    //cart page
+    if(document.body.id === "cartPage"){
+        const prodInCartDiv = document.getElementById("prods_in_cart");
+        const cartEmptyText = document.getElementById("empty_cart");
+        const checkoutNA = document.getElementById("checkout_NA");
+        const checkoutOK = document.getElementById("checkout_ok");
+        if (prodInCartDiv.innerHTML.trim() !== ""){
+            checkoutNA.style.display = "none";
+            checkoutOK.style.display = "block";
+            cartEmptyText.style.display = "none";
         }
+        else{
+            checkoutNA.style.display = "block";
+            checkoutOK.style.display = "none";
+            cartEmptyText.style.display = "block";
+        }
+    }
+
+
+
+
+
+
+
+
+
     });
-
-
-
-
-});
