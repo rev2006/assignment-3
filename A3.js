@@ -95,9 +95,15 @@ document.addEventListener('DOMContentLoaded', () => {
             let price_str = product_price.textContent;
             let productPrice = parseFloat(price_str.replace("$", ""));
             let productSize = document.getElementById("size").value;
+
+            cart[numberOfItems]=[];
             //add values to array
-            cart[numberOfItems] = [productName,productPrice, productSize];
+            cart[numberOfItems][0] = productName;
+            cart[numberOfItems][1] = productPrice;
+            cart[numberOfItems][2] = productSize;
             numberOfItems ++;
+
+            localStorage.setItem("cart", JSON.stringify(cart));
         } );
     }
 
@@ -109,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cartEmptyText = document.getElementById("empty_cart");
         const checkoutNA = document.getElementById("checkout_NA");
         const checkoutOK = document.getElementById("checkout_ok");
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
         if (prodInCartDiv.innerHTML.trim() !== ""){
             checkoutNA.style.display = "none";
             checkoutOK.style.display = "block";
@@ -119,9 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
             checkoutOK.style.display = "none";
             cartEmptyText.style.display = "block";
         }
+        //add products to cart
+        // for(let i=0; i<cart.length; i++){
+        //     let newProdDiv = document.createElement('div');
+        //     newProdDiv.textContent = 'Product: ${cart[i][0]}, Price: $${cart[i][1]}, Size: ${cart[i][2]}';
+        //     prodInCartDiv.appendChild(newProdDiv);
+        // }
+
+        
     }
-
-
 
 
 
