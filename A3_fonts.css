@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;400;500;600;700;800&display=swap');
+/* fonts used 
+.montserrat-alternates-extralight {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-light {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-regular {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-medium {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-semibold {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-bold {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .montserrat-alternates-extrabold {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  */
+/* colors palette
+grey #9eadb1
+greenish-grey #64838a
+base blue #a3d1db
+green/blue #395e66
+dark green/blue #142d33
+*/
+
+header{
+
+    #title_desktop{
+        font-family: Arial, sans-serif;
+        font-weight: 800;
+        text-align: left;
+        color: #142d33;
+        text-decoration: none;
+        font-size: 2vw;
+    }
+    #nav_link > a {
+      font-family: 'Montserrat Alternates',sans-serif;
+      font-weight: 800;
+      font-style: normal;
+      color: #142d33;
+      text-decoration: none;
+      font-size: 0.7vw;
+    }
+
+    @media (max-width:850px){
+      #title_mobile{
+        font-family: Arial, sans-serif;
+        font-weight: 800;
+        text-align: left;
+        color: #142d33;
+        text-decoration: none;
+        font-size: 5vw;
+      }
+
+      #side_panel {
+        a{
+          font-family: "Montserrat Alternates", sans-serif;
+          font-weight: 800;
+          font-style: normal;
+          text-decoration: none;
+          color: #142d33;
+          font-size: 3vw;
+        }
+      }
+
+    }
+
+}
+
+body{
+  h1{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #142d33;
+    font-size: 4vw;
+  }
+  h2,h3,h4,h5,p{
+      font-family: 'Montserrat Alternates', sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      color: #142d33;
+      font-size: 2vw;
+  }
+
+  .prod_lab, .prod_lab_n, .prod_cat {
+    color: #9eadb1;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
+    font-size: 1.1vw;
+  }
+  .prod_lab_n{
+    font-size: 1.5vw;
+  }
+  .prod_cat{
+    font-size: 0.8vw;
+  }
+
+  .primary_button{
+    color: #9eadb1;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 2vw;
+
+  }
+  #sort_by_button, #size{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #9eadb1;
+    font-size: 1.4vw;
+  }
+
+  label{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #142d33;
+    margin-left: 1.5vw;
+  }
+}
+
+#homepage{
+  #new_print{
+    font-size: 4vw;
+  }
+  #new_funky{
+    font-size: 4vw;
+  }
+  #L_I_T, #T_S{
+    font-size: 4vw;
+  }
+}
+
+#profilePage{
+
+  #page_title{
+    font-size: 4.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  input{
+    color: #142d33;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  input::placeholder{
+    color: #142d33;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  #FP,#CA {
+    text-decoration: none;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #142d33;
+  }
+}
+
+#cartPage{
+  h2{
+    font-size: 2.5vw;
+  }
+  #checkout_NA, #checkout_ok{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 2vw;
+    color: #9eadb1;
+  }
+  #most_bought{
+    font-size: 1.8vw;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+
+}
+
+#prod_listing_page{
+  h3{
+    font-size: 1.5vw;
+  }
+}
+
+#checkout_page{
+  h2{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 2.5vw;
+  }
+}
+
+.prod_pages{
+
+  #below_prod{
+    #add_to_cart_disabled{
+      color: #9eadb1;
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+      font-size: 2vw;
+    }
+    h3{
+      font-size: 1.3vw;
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+  }
+  #review_section{
+    h3{
+      font-size: 1.8vw;
+    }
+    p{
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.5vw;
+    }
+    .may_also_like{
+      h2{
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+      }
+    }
+  }
+}
