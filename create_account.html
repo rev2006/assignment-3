@@ -7,9 +7,9 @@
     <link rel="stylesheet" type="text/css" href="A3_fonts.css">
     <link rel="stylesheet" type="text/css" href="A3_colors.css">
     <script src="A3.js"></script>
-    <title>Checkout</title>
+    <title>Create account</title>
 </head>
-<body id="checkout_page">
+<body id="create_account">
     <header>
         <div id="nav_left">
     
@@ -54,48 +54,24 @@
         </div>
     </header>
 
-    <h1>PAYMENT</h1>
-    <div id="detail_layout">
-        <div id="details">
-            <h2>Card details</h2>
-            <form action="">
-                <div id="form_group">
-                    <label for="card_num">Card number</label>
-                    <input type="text" name="card_num" id="card_num" placeholder="0000-0000-0000-0000"> <br>
-                    <label for="card_name">Name</label>
-                    <input type="text" name="card_name" id="card_name" placeholder="John Smith"><br> 
-                    <div id="sub_input_row">
-                        <div id="sub_input">
-                            <label for="card_ex">Expiry</label>
-                            <input type="text" name="card_ex" id="card_ex" placeholder="mm/yy">
-                        </div>
-                        <div id="sub_input">
-                            <label for="card_cvc">CVC</label>
-                            <input type="number" name="card_cvc" id="card_cvc" placeholder="000">
-                        </div>
-                    </div>
-                </div>   
-            </form>
+    <div id="center_elements">
+        <div id="form_group">
+            <h1>CREATE ACCOUNT</h1>
+            <h2>Fill in your details to create an account</h2>
+            <div id="inputs">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="profile_name" placeholder="John Smith"> <br>
+                <label for="number">Phone number</label>
+                <input type="number" name="number" id="profile_number" placeholder="+00 000000000"> <br>
+                <label for="email">E-mail address</label>
+                <input type="email" name="email" id="profile_email" placeholder="E-mail address"> <br>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="profile_password" placeholder="Password"> <br>
+            </div>
         </div>
-        <div id="border_vert"></div>
-        <div id="details">
-            <h2>Personal details</h2>
-            <form action="">
-                <div id="form_group">
-                    <label for="email">E-mail address</label>
-                    <input type="email" name="email" id="email_deets" placeholder="JohnSmith@gmail.com"> <br>
-                    <label for="Pnumber">Pnumber</label>
-                    <input type="number" name="Pnumber" id="number_deets" placeholder="000000000"><br> 
-                    <label for="Address">Address</label>
-                    <input type="text" name="Address" id="address" placeholder="number, street, postcode, city"><br> 
-                </div>
 
-            </form>
-        </div>
+        <button class="primary_button">Create</button>
     </div>
-    <a id="pay_button" href="confirmation_page.html">
-        <button class="primary_button">Pay</button>
-    </a>
-
+    
 </body>
 </html>

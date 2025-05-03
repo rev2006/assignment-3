@@ -431,6 +431,9 @@ text-align: center;
     flex-direction: column;
     align-items: center; 
   }
+  #CA{
+    padding-bottom: 3vw;
+  }
   
 }
 
@@ -538,6 +541,71 @@ text-align: center;
     margin: 3.8vw;
   }
 }
+
+#forgot_password{
+  #center_elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #form_group{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #inputs{
+        display: flex;
+        flex-direction: column;
+        margin: 3vw;
+        input{
+          width: 40vw;
+          height: 3vw;
+        }
+        input::placeholder{
+          padding-left: 10px;
+        }
+
+        label{
+          align-self: start;
+        }
+      }
+    }
+
+  }
+    
+}
+
+#create_account{
+  #center_elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #form_group{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #inputs{
+        display: flex;
+        flex-direction: column;
+        margin: 3vw;
+        input{
+          width: 40vw;
+          height: 3vw;
+        }
+        input::placeholder{
+          padding-left: 10px;
+        }
+
+        label{
+          align-self: start;
+        }
+      }
+    }
+
+  }
+    
+}
+
 
 
 .prod_pages{
