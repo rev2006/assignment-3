@@ -1,0 +1,140 @@
+
+header{
+    background-image: linear-gradient(#395e66,#a3d1db);
+    #title_desktop{
+        color: #142d33;
+    }
+    #nav_link > a {
+        color: #142d33;
+    }
+    #side_panel{
+        background-color: #64838a;
+    }
+    @media (max-width:850px){
+        #title_mobile{
+            color: #142d33;
+        }
+        #side_panel {
+            a{
+              color: #142d33;
+            }
+          }
+
+    }
+}
+
+body{
+    h1{
+        color: #142d33;
+    }
+
+    h2,h3,h4,h5,p{
+        color: #142d33;
+    }
+
+    .prod, .prod_hp {
+        border: #395e66 solid 0.4vw;
+    }
+    .prod_lab, .prod_lab_n, .prod_cat {
+        color: #9eadb1;
+        background-color: #395e66;
+    }
+    .prod:hover .prod_lab, .prod:hover .prod_lab_n, .prod:hover .prod_cat {
+        background-color: #142d33;
+    }
+    .prod_hp:hover .prod_lab, .prod_hp:hover .prod_lab_n, .prod_hp:hover .prod_cat {
+        background-color: #142d33;
+    }
+
+    #border{
+        border: #395e66 solid 1vw;
+      }
+
+
+    .scroll::-webkit-scrollbar-track, #photos_list::-webkit-scrollbar-track {
+        background: #64838a;
+    }
+
+    .scroll::-webkit-scrollbar-thumb, #photos_list::-webkit-scrollbar-thumb {
+        background: #395e66; 
+    }
+
+    #border_light_H{
+        border: #395e66 solid 0.25vw;
+    }
+
+    .primary_button{
+        background-color: #142d33;
+        color: #9eadb1;
+    }
+
+    .primary_button:focus, .primary_button:hover {
+        border-color: #395e66;
+        background-color: #142d33;
+        box-shadow: 0 0 0 3px #395e6679;
+    }
+
+    #sort_by_button, #size{
+        background-color: #395e66;
+    }
+    #sort_by_button, #size{
+        color: #9eadb1;
+    }
+    label{
+        color: #142d33;
+    }
+    input{
+        background-color: #9eadb1;
+    }
+    input:focus, input:hover {
+        border-color: #395e66;
+        background-color: #9eadb1;
+        box-shadow: 0 0 0 3px #395e6679;
+    }
+}
+
+#homepage{
+    #hp_first > img{
+        border: #395e66 solid 0.4vw;
+    }
+    #category_hp img {
+        border: #395e66 solid 0.4vw;
+    }
+    #box_link:hover{
+        border-color: #142d33;
+    }
+}
+
+#profilePage{
+    #FP,#CA {
+        color: #142d33;
+    }
+    input{
+        color: #142d33;
+    }
+    input::placeholder{
+        color: #142d33;
+    }
+}
+
+#cartPage{
+    #checkout_NA, #checkout_ok{
+        color: #9eadb1;
+    }
+    #checkout_ok{
+        background-color:#142d33;
+    }
+}
+
+.prod_pages{
+    #add_to_cart_disabled{
+        color: #9eadb1;
+    }
+    .prod_photo{
+        border: #395e66 solid 0.4vw;
+    }
+    #add_to_cart_disabled{
+        background-color: #64838a;
+    }
+
+}

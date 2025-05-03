@@ -1,55 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;400;500;600;700;800&display=swap');
-/* fonts used 
-.montserrat-alternates-extralight {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .montserrat-alternates-light {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .montserrat-alternates-regular {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .montserrat-alternates-medium {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .montserrat-alternates-semibold {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .montserrat-alternates-bold {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .montserrat-alternates-extrabold {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  */
-/* colors palette
-grey #9eadb1
-greenish-grey #64838a
-base blue #a3d1db
-green/blue #395e66
-dark green/blue #142d33
-*/
 
 
 /* header desktop */
@@ -58,14 +7,11 @@ header{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-image: linear-gradient(#395e66,#a3d1db);
       height: 5vw;
 
   #title_desktop{
-
       margin-left: 2vw;
       margin-right: 0px;
-      
   }
   #title_mobile{
     display: none;
@@ -152,7 +98,6 @@ header{
       left: -60vw;
       width: 40vw;
       height: 200vw;
-      background-color: #64838a;
       display: flex;
       flex-direction: column;
       padding: 3vw;
@@ -205,7 +150,6 @@ body{
     display: block;
     justify-content: center;
     align-items: center;
-    border: #395e66 solid 0.4vw;
     border-radius: 1vw;
     margin: 2vw;
     flex-shrink: 0;
@@ -220,7 +164,6 @@ body{
     display: block;
     justify-content: center;
     align-items: center;
-    border: #395e66 solid 0.4vw;
     border-radius: 1vw;
     margin: 1vw;
     flex-shrink: 0;
@@ -244,7 +187,6 @@ body{
   }
   /*labels underneath container*/
   .prod_lab, .prod_lab_n, .prod_cat {
-    background-color: #395e66;
     padding: 0.4vw;
     width: 100%;
     box-sizing: border-box;
@@ -265,19 +207,15 @@ body{
     transition: 0.5s;
   }
   .prod:hover .prod_lab, .prod:hover .prod_lab_n, .prod:hover .prod_cat {
-    background-color: #142d33;
     transform: scale(1.02);
     transition: 0.5s;
   }
   .prod_hp:hover .prod_lab, .prod_hp:hover .prod_lab_n, .prod_hp:hover .prod_cat {
-    background-color: #142d33;
     transform: scale(1.02);
     transition: 0.5s;
   }
 
-  #border{
-    border: #395e66 solid 1vw;
-  }
+
 
   /*scroll bar*/
   .scroll::-webkit-scrollbar, #photos_list::-webkit-scrollbar{
@@ -285,11 +223,9 @@ body{
   }
 
   .scroll::-webkit-scrollbar-track, #photos_list::-webkit-scrollbar-track {
-    background: #64838a;
     border-radius: 0.8vw; 
   }
   .scroll::-webkit-scrollbar-thumb, #photos_list::-webkit-scrollbar-thumb {
-    background: #395e66; 
     border-radius: 1vw;
   }
 
@@ -319,7 +255,6 @@ body{
   }
 
   #border_light_H{
-    border: #395e66 solid 0.25vw;
     width: 50vw;
     justify-self: center;
     margin-top: 1vw;
@@ -336,7 +271,6 @@ body{
 
   /*button*/
   .primary_button{
-    background-color: #142d33;
     border: none;
     border-radius: 1vw;
     width: 17vw;
@@ -345,9 +279,6 @@ body{
   }
   .primary_button:focus, .primary_button:hover {
     outline: none;
-    border-color: #395e66;
-    background-color: #142d33;
-    box-shadow: 0 0 0 3px #395e6679;
     transition: 0.5s;
    }
 
@@ -357,7 +288,7 @@ body{
   }
 
   #sort_by_button, #size{
-    background-color: #395e66;
+
     border: none;
     border-radius: 0.8vw;
     height: 2.8vw;
@@ -367,7 +298,6 @@ body{
 
   /*input*/
   input{
-    background-color: #9eadb1;
     border: none;
     border-radius: 0.8vw;
     margin-top: 0.5vw;
@@ -386,9 +316,6 @@ body{
   }
   input:focus, input:hover {
     outline: none;
-    border-color: #395e66;
-    background-color: #9eadb1;
-    box-shadow: 0 0 0 3px #395e6679;
     transition: 0.5s;
   }
 
@@ -408,7 +335,6 @@ body{
   }
 
   #hp_first > img{
-    border: #395e66 solid 0.4vw;
     border-radius: 0.8vw;
     margin: 4vw;
     width: 20%;
@@ -470,7 +396,6 @@ body{
 
 }
 #category_hp img {
-  border: #395e66 solid 0.4vw;
   border-radius: 0.8vw;
   width: 100%;
   height: 100%;
@@ -478,7 +403,6 @@ body{
   display: block;
 }
 #box_link:hover{
-  border-color: #142d33;
   transform: scale(1.05);
   transition: 0.5s;
 }
@@ -501,13 +425,6 @@ text-align: center;
     padding-left: 10px;
   }
 
-  #FP,#CA {
-    text-decoration: none;
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    color: #142d33;
-  }
 
   #profile_form{
     display: flex;
@@ -545,7 +462,6 @@ text-align: center;
     display: block;
   }
   #checkout_ok{
-    background-color:#142d33;
     display: none;
   }
 
@@ -627,13 +543,11 @@ text-align: center;
 .prod_pages{
 
   .prod_photo{
-
     width: 80%; 
     display: flex; 
     display: block;
     justify-content: center;
     align-items: center;
-    border: #395e66 solid 0.4vw;
     border-radius: 1vw;
     margin: 3vw;
     flex-shrink: 0;
@@ -693,7 +607,6 @@ text-align: center;
     #add_to_cart_disabled{
       margin-right: 4vw;
       margin-left: auto;
-      background-color: #64838a;
       border: none;
       border-radius: 1vw;
       width: 17vw;

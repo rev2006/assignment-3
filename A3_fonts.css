@@ -57,7 +57,6 @@ header{
         font-family: Arial, sans-serif;
         font-weight: 800;
         text-align: left;
-        color: #142d33;
         text-decoration: none;
         font-size: 2vw;
     }
@@ -65,7 +64,6 @@ header{
       font-family: 'Montserrat Alternates',sans-serif;
       font-weight: 800;
       font-style: normal;
-      color: #142d33;
       text-decoration: none;
       font-size: 0.7vw;
     }
@@ -75,7 +73,6 @@ header{
         font-family: Arial, sans-serif;
         font-weight: 800;
         text-align: left;
-        color: #142d33;
         text-decoration: none;
         font-size: 5vw;
       }
@@ -86,7 +83,6 @@ header{
           font-weight: 800;
           font-style: normal;
           text-decoration: none;
-          color: #142d33;
           font-size: 3vw;
         }
       }
@@ -100,19 +96,16 @@ body{
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
-    color: #142d33;
     font-size: 4vw;
   }
   h2,h3,h4,h5,p{
       font-family: 'Montserrat Alternates', sans-serif;
       font-weight: 600;
       font-style: normal;
-      color: #142d33;
       font-size: 2vw;
   }
 
   .prod_lab, .prod_lab_n, .prod_cat {
-    color: #9eadb1;
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 600;
     font-size: 1.1vw;
@@ -125,7 +118,6 @@ body{
   }
 
   .primary_button{
-    color: #9eadb1;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -136,7 +128,6 @@ body{
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
-    color: #9eadb1;
     font-size: 1.4vw;
   }
 
@@ -144,7 +135,6 @@ body{
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #142d33;
     margin-left: 1.5vw;
   }
 }
@@ -168,13 +158,11 @@ body{
     font-family: Arial, Helvetica, sans-serif;
   }
   input{
-    color: #142d33;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
   input::placeholder{
-    color: #142d33;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -184,7 +172,6 @@ body{
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
-    color: #142d33;
   }
 }
 
@@ -197,7 +184,6 @@ body{
     font-weight: 800;
     font-style: normal;
     font-size: 2vw;
-    color: #9eadb1;
   }
   #most_bought{
     font-size: 1.8vw;
@@ -228,7 +214,6 @@ body{
 
   #below_prod{
     #add_to_cart_disabled{
-      color: #9eadb1;
       font-family: "Montserrat Alternates", sans-serif;
       font-weight: 800;
       font-style: normal;
