@@ -70,9 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    //intialize array of products in cart
-    let cart = [];
-    let numberOfItems = 0;
+    //intialize array of products in cart to local storage. ensures data is stored on browser, hence isnt lost on reload or page change
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     //product page
     //add to cart disabled
@@ -91,17 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
         //adding to cart
         // information of required products
         addButton.addEventListener("click", function(){
+            let productImage = document.getElementById("product_pic").src;
             let productName = product_name.textContent;
             let price_str = product_price.textContent;
             let productPrice = parseFloat(price_str.replace("$", ""));
             let productSize = document.getElementById("size").value;
-
-            cart[numberOfItems]=[];
             //add values to array
-            cart[numberOfItems][0] = productName;
-            cart[numberOfItems][1] = productPrice;
-            cart[numberOfItems][2] = productSize;
-            numberOfItems ++;
+            cart.push([productImage,productName, productPrice, productSize]);
 
             localStorage.setItem("cart", JSON.stringify(cart));
         } );
@@ -115,23 +110,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const cartEmptyText = document.getElementById("empty_cart");
         const checkoutNA = document.getElementById("checkout_NA");
         const checkoutOK = document.getElementById("checkout_ok");
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        if (prodInCartDiv.innerHTML.trim() !== ""){
+        const subHeadings = document.getElementById("subheadings");
+
+        if (cart.length>0){
             checkoutNA.style.display = "none";
             checkoutOK.style.display = "block";
             cartEmptyText.style.display = "none";
+            subHeadings.style.display = "flex";
         }
         else{
             checkoutNA.style.display = "block";
             checkoutOK.style.display = "none";
             cartEmptyText.style.display = "block";
+            subHeadings.style.display = "none";
         }
         //add products to cart
-        // for(let i=0; i<cart.length; i++){
-        //     let newProdDiv = document.createElement('div');
-        //     newProdDiv.textContent = 'Product: ${cart[i][0]}, Price: $${cart[i][1]}, Size: ${cart[i][2]}';
-        //     prodInCartDiv.appendChild(newProdDiv);
-        // }
+        for(let i=0; i<cart.length; i++){
+            let newProdDiv = document.createElement('div');
+            newProdDiv.className = "cart_item";
+            newProdDiv.textContent = `${cart[i][0]} $${cart[i][1]} ${cart[i][2]}`;
+            prodInCartDiv.appendChild(newProdDiv);
+            
+        }
 
         
     }
