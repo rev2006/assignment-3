@@ -74,12 +74,11 @@ body{
         box-shadow: 0 0 0 3px #395e6679;
     }
 
-    #sort_by_button, #size{
+    select{
         background-color: #395e66;
-    }
-    #sort_by_button, #size{
         color: #9eadb1;
     }
+
     label{
         color: #142d33;
     }
@@ -124,6 +123,13 @@ body{
     #checkout_ok{
         background-color:#142d33;
     }
+    #cart_prods, #cart_size, #cart_amm, #cart_price{
+        img{
+            border: #395e66 solid 0.4vw;
+          }
+
+    }
+
 }
 
 .prod_pages{

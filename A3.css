@@ -287,7 +287,7 @@ body{
     align-items: center;
   }
 
-  #sort_by_button, #size{
+  select{
 
     border: none;
     border-radius: 0.8vw;
@@ -473,7 +473,23 @@ text-align: center;
   #checkout_ok{
     display: none;
   }
+  #cart_prods, #cart_size, #cart_amm, #cart_price{
+    text-align: center;
+    img{
+      border-radius: 1vw;
+    }
+  }
+  #cart_size{
+    display: flex;
+    flex-direction: column;
+    select{
+      margin-top: 7vw;
+      margin-bottom: 17vw;
 
+
+    }
+  }
+  
 }
 
 #prod_listing_page{

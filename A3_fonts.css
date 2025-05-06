@@ -124,7 +124,7 @@ body{
     font-size: 2vw;
 
   }
-  #sort_by_button, #size{
+  select{
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -192,8 +192,9 @@ body{
     font-style: normal;
   }
   h3{
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
+
 
 }
 

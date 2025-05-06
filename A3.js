@@ -106,11 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //cart page
     if(document.body.id === "cartPage"){
-        const prodInCartDiv = document.getElementById("prods_in_cart");
         const cartEmptyText = document.getElementById("empty_cart");
         const checkoutNA = document.getElementById("checkout_NA");
         const checkoutOK = document.getElementById("checkout_ok");
         const subHeadings = document.getElementById("subheadings");
+
+        const prodInCartDiv = document.getElementById("prods_in_cart");
+        const cartProd = document.getElementById("cart_prods");
+        const cartSize = document.getElementById("cart_size");
+        const cartAmm = document.getElementById("cart_amm");
+        const cartPrtice = document.getElementById("cart_price");
+
 
         if (cart.length>0){
             checkoutNA.style.display = "none";
@@ -126,10 +132,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         //add products to cart
         for(let i=0; i<cart.length; i++){
-            let newProdDiv = document.createElement('div');
-            newProdDiv.className = "cart_item";
-            newProdDiv.textContent = `${cart[i][0]} $${cart[i][1]} ${cart[i][2]}`;
-            prodInCartDiv.appendChild(newProdDiv);
+            const item = cart[i];
+            //produuct img and name
+            let prodCont = document.createElement("div");
+            prodCont.classList.add("prod_info");
+            prodCont.style.width = "18vw";
+
+            let itemImg = document.createElement("img");
+            itemImg.src = cart[i][0];
+            itemImg.style.width = "100%";
+
+            let itemName = document.createElement("p");
+            itemName.textContent = cart[i][1]
+
+            prodCont.appendChild(itemImg);
+            prodCont.appendChild(itemName);
+            cartProd.appendChild(prodCont);
+
+            //product size
+            const sizeSelect = document.createElement("select");
+            const sizes = ["XS", "S", "M", "L", "XL"];
+            sizes.forEach(size => {
+                const option = document.createElement("option");
+                option.value = size.toLowerCase();
+                option.textContent = size;
+                if (size.toLowerCase() === item[3]) {
+                    option.selected = true;
+                }
+                sizeSelect.appendChild(option);
+            });
+            cartSize.appendChild(sizeSelect);
+
+            //product ammount
             
         }
 
