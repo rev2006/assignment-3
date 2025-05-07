@@ -133,23 +133,31 @@ document.addEventListener('DOMContentLoaded', () => {
         //add products to cart
         for(let i=0; i<cart.length; i++){
             const item = cart[i];
-            //produuct img and name
-            let prodCont = document.createElement("div");
-            prodCont.classList.add("prod_info");
-            prodCont.style.width = "18vw";
 
-            let itemImg = document.createElement("img");
-            itemImg.src = cart[i][0];
+            const cartRow = document.createElement("div");
+            cartRow.classList.add("cart_row");
+
+            //product info
+            const prodCont = document.createElement("div");
+            prodCont.classList.add("prod_info");
+            prodCont.style.width = "20%";
+            
+                    
+            const itemImg = document.createElement("img");
+            itemImg.src = item[0];
             itemImg.style.width = "100%";
 
-            let itemName = document.createElement("p");
-            itemName.textContent = cart[i][1]
+            const itemName = document.createElement("p");
+            itemName.textContent = item[1];
 
             prodCont.appendChild(itemImg);
             prodCont.appendChild(itemName);
-            cartProd.appendChild(prodCont);
+            cartRow.appendChild(prodCont);
 
-            //product size
+            // product size
+            const sizeDiv = document.createElement("div");
+            sizeDiv.classList.add("prod_size");
+
             const sizeSelect = document.createElement("select");
             const sizes = ["XS", "S", "M", "L", "XL"];
             sizes.forEach(size => {
@@ -161,10 +169,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 sizeSelect.appendChild(option);
             });
-            cartSize.appendChild(sizeSelect);
 
-            //product ammount
-            
+            sizeDiv.appendChild(sizeSelect);
+            cartRow.appendChild(sizeDiv);
+
+            // product ammount
+            const amountDiv = document.createElement("div");
+            amountDiv.classList.add("prod_amount");
+
+            const itemAmm = document.createElement("input");
+            itemAmm.type = "number";
+            itemAmm.value = 1;
+            itemAmm.style.width = "3vw";
+
+            amountDiv.appendChild(itemAmm);
+            cartRow.appendChild(amountDiv);
+            const priceDiv = document.createElement("div");
+            priceDiv.classList.add("prod_price");
+        
+            // product price
+            const itemPrice = document.createElement("p");
+            itemPrice.textContent = "$" + item[2];  
+        
+            priceDiv.appendChild(itemPrice);
+            cartRow.appendChild(priceDiv);
+            if (i !==0){
+                const miniDiv = document.createElement("div");
+                miniDiv.id = 'border_light_H';
+                prodInCartDiv.appendChild(miniDiv);
+            }
+
+            prodInCartDiv.appendChild(cartRow);
+
+
         }
 
         

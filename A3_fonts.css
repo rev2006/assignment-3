@@ -194,6 +194,14 @@ body{
   h3{
     font-size: 2vw;
   }
+  .cart_row{
+    input{
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+      font-size: 1.5vw;
+    }
+  }
 
 
 }
