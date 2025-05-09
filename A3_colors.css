@@ -96,10 +96,10 @@ body{
     #hp_first > img{
         border: #395e66 solid 0.4vw;
     }
-    #category_hp img {
+    .category_hp img {
         border: #395e66 solid 0.4vw;
     }
-    #box_link:hover{
+    .box_link:hover{
         border-color: #142d33;
     }
 }

@@ -149,6 +149,19 @@ body{
   #L_I_T, #T_S{
     font-size: 4vw;
   }
+  @media (max-width:850px){
+    .prod_hp {
+      .prod_lab_n{
+        font-size: 2.5vw;
+      }
+      .prod_cat{
+        font-size: 1.5vw;
+      }
+      .prod_lab{
+        font-size: 2vw;
+      }
+    }
+  }
 }
 
 #profilePage{
@@ -202,6 +215,13 @@ body{
       font-size: 1.5vw;
     }
   }
+  #final_cost{
+    h3{
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+  }
 
 
 }
@@ -209,6 +229,19 @@ body{
 #prod_listing_page{
   h3{
     font-size: 1.5vw;
+  }
+  @media (max-width:850px){
+  .prod {
+    .prod_lab_n{
+      font-size: 2.5vw;
+    }
+    .prod_cat{
+      font-size: 1.5vw;
+    }
+    .prod_lab{
+      font-size: 2vw;
+    }
+    }
   }
 }
 

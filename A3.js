@@ -111,11 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const checkoutOK = document.getElementById("checkout_ok");
         const subHeadings = document.getElementById("subheadings");
 
+        const postage = document.getElementById("postage");
+        const finalCost = document.getElementById("final_cost");
+
+        const totalPrice = document.getElementById("total_cost");
+
         const prodInCartDiv = document.getElementById("prods_in_cart");
-        const cartProd = document.getElementById("cart_prods");
-        const cartSize = document.getElementById("cart_size");
-        const cartAmm = document.getElementById("cart_amm");
-        const cartPrtice = document.getElementById("cart_price");
 
 
         if (cart.length>0){
@@ -123,13 +124,19 @@ document.addEventListener('DOMContentLoaded', () => {
             checkoutOK.style.display = "block";
             cartEmptyText.style.display = "none";
             subHeadings.style.display = "flex";
+            postage.style.display = "flex";
+            finalCost.style.display = "block";
         }
         else{
             checkoutNA.style.display = "block";
             checkoutOK.style.display = "none";
             cartEmptyText.style.display = "block";
             subHeadings.style.display = "none";
+            postage.style.display= "none";
+            finalCost.style.display = "none";
         }
+
+        let totalCost =0;
         //add products to cart
         for(let i=0; i<cart.length; i++){
             const item = cart[i];
@@ -180,7 +187,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemAmm = document.createElement("input");
             itemAmm.type = "number";
             itemAmm.value = 1;
-            itemAmm.style.width = "3vw";
+            itemAmm.style.width = "4vw";
+
+            const unitPrice = item[2];
+
+            // update price based on quantity
+            itemAmm.addEventListener("input", () => {
+                const quantity = parseInt(itemAmm.value) || 0;
+                itemPrice.textContent = "$" + (unitPrice * quantity).toFixed(2);
+
+                let newTotal = 0;
+                const allRows = document.querySelectorAll(".cart_row");
+                allRows.forEach((row, index) => {
+                    const qtyInput = row.querySelector("input[type='number']");
+                    const qty = parseInt(qtyInput.value) || 0;
+                    const pricePerUnit = cart[index][2];
+                    newTotal += qty * pricePerUnit;
+                });
+
+                totalPrice.textContent = "$" + newTotal.toFixed(2);
+            });
 
             amountDiv.appendChild(itemAmm);
             cartRow.appendChild(amountDiv);
@@ -189,10 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
         
             // product price
             const itemPrice = document.createElement("p");
+            totalCost += item[2];
             itemPrice.textContent = "$" + item[2];  
         
             priceDiv.appendChild(itemPrice);
             cartRow.appendChild(priceDiv);
+
+            //border
             if (i !==0){
                 const miniDiv = document.createElement("div");
                 miniDiv.id = 'border_light_H';
@@ -204,7 +233,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-        
+        // if (cart.length>0){
+        //     itemAmm.addEventListener("click", function(){
+
+        //     })
+        // }
+
+        totalPrice.textContent = "$" + totalCost.toFixed(2);
     }
 
 
