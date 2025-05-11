@@ -324,6 +324,13 @@ body{
       width: 45%; 
 
     }
+    .prod_lab, .prod_lab_n, .prod_cat {
+      padding: 0.6vw;
+
+    }
+    button{
+      border-radius: 2vw;
+    }
 
 
   }
@@ -555,17 +562,9 @@ text-align: center;
       flex-wrap: wrap;
       justify-content: space-around;
       .prod {
-      aspect-ratio: 11 / 16;
-      width: 45%; 
-      display: flex; 
-      display: block;
-      justify-content: center;
-      align-items: center;
-      border-radius: 1vw;
-      margin: 1vw;
-      flex-shrink: 0;
-      text-decoration: none; 
-      transition: transform 0.5s, border-color 0.5s, background-color 0.5s;
+        width: 45%;
+        border-radius: 1vw;
+        margin: 1vw;
       } 
     }
   }
@@ -747,10 +746,9 @@ text-align: center;
     align-items: center;
     margin-top: 3vw;
     margin-bottom: 3vw;
+    margin-left: 10vw;
+    justify-content: space-between;
 
-    .side{
-      margin-left: 4vw;
-    }
 
     .side_button{
       position: relative;
@@ -774,16 +772,14 @@ text-align: center;
     #size{
       width: 6vw;
     }
-    h3{
-      flex-grow: 1;
+    #prod_text{
+      margin: 2vw;
       text-align: center;
+      width: 40vw;
+      margin-left: 6vw;
+
     }
-    .side{
-      width: 20vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+
   }
 
   #review_section{
@@ -828,7 +824,9 @@ text-align: center;
       padding-top: 0vw;
     }
   }
-
+  .star{
+    width: 8%;
+  }
   #write_review{
     text-align: center;
     text-decoration: none;
@@ -846,4 +844,62 @@ text-align: center;
     }
     
   }
+
+  @media (max-width:850px){
+    #product_name{
+      margin-left: 5vw;
+    }
+    #product_price{
+      margin-right: 3vw;
+    }
+
+    .prod_photo{
+      width: 100%; 
+  
+
+    }
+    #below_prod{
+      #size{
+        width: 12vw;
+        height: 5vw;
+        border-radius: 2vw;
+      }
+
+      .side_button {
+        display: flex;
+        gap: 0.5vw;
+        justify-content: center;
+
+      }
+
+      #add_to_cart_disabled,#add_to_cart{
+        width: 25vw;
+        height: 5vw;
+        border-radius: 2vw;
+      }
+    }
+
+    #prod_text{
+      width: 50vw;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 5vw;
+    }
+  .star{
+    width: 12%;
+  }
+  #prod_list4x1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .prod {
+      width: 45%;
+      border-radius: 1vw;
+      margin: 1vw;
+    } 
+  }
+      
+  }
+
+  
 }

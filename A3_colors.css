@@ -24,6 +24,7 @@ header{
 }
 
 body{
+    
     h1{
         color: #142d33;
     }
@@ -90,6 +91,12 @@ body{
         background-color: #9eadb1;
         box-shadow: 0 0 0 3px #395e6679;
     }
+
+    @media (max-width:850px){
+        .prod, .prod_hp {
+            border: #395e66 solid 0.6vw;
+        }
+    }
 }
 
 #homepage{
@@ -141,7 +148,7 @@ body{
         color: #9eadb1;
     }
     .prod_photo{
-        border: #395e66 solid 0.4vw;
+        border: #395e66 solid 0.6vw;
     }
     #add_to_cart_disabled{
         background-color: #64838a;

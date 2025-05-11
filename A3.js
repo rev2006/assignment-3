@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //scrolling
 
     //scrolling homepage items
+    // const photoContainer = document.getElementById('photos_list');
+    // const photos = photoContainer.querySelectorAll('img');
+    // const scrollAm = photos[0].offsetWidth;
     const scrollLIT = document.getElementById('LIT_items');
     const scrollTS = document.getElementById('TS_items');
     const scrollAm = 300;
@@ -73,6 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
     //intialize array of products in cart to local storage. ensures data is stored on browser, hence isnt lost on reload or page change
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+
+
+
+
     //product page
     //add to cart disabled
     if(document.body.classList.contains("prod_pages")){
@@ -100,7 +107,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
             localStorage.setItem("cart", JSON.stringify(cart));
         } );
+
+        const mobileTextDiv = document.getElementById("mobile_text");
+        const desktopTextDiv = document.getElementById("desktop_text");
+        
+        let prodText= document.getElementById("prod_text").textContent;
+
+        function updateProdText(descText){
+            const ogText = document.getElementById("prod_text");
+            if (ogText) ogText.remove();
+
+            let newH3 = document.createElement("h3");
+            newH3.textContent= prodText;
+            newH3.id= "prod_text";
+
+            if (descText.matches){
+                mobileTextDiv.appendChild(newH3);
+            }
+            else{
+                desktopTextDiv.appendChild(newH3);
+            }
+        }
+
+        const sizeChange = window.matchMedia("(max-width: 850px)");
+        sizeChange.addEventListener("change", updateProdText);
+        updateProdText(sizeChange);
+
+
     }
+
+
+
 
 
 
