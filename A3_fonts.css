@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;400;500;600;700;800&display=swap');
 /* fonts used 
 .montserrat-alternates-extralight {
@@ -51,206 +50,278 @@ green/blue #395e66
 dark green/blue #142d33
 */
 
-header{
+header {
 
-    #title_desktop{
-        font-family: Arial, sans-serif;
-        font-weight: 800;
-        text-align: left;
-        text-decoration: none;
-        font-size: 2vw;
-    }
-    #nav_link > a {
-      font-family: 'Montserrat Alternates',sans-serif;
+  #title_desktop {
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+    text-align: left;
+    text-decoration: none;
+    font-size: 2vw;
+  }
+
+  #nav_link>a {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 0.7vw;
+  }
+
+  @media (max-width:850px) {
+    #title_mobile {
+      font-family: Arial, sans-serif;
       font-weight: 800;
-      font-style: normal;
+      text-align: left;
       text-decoration: none;
-      font-size: 0.7vw;
+      font-size: 5vw;
     }
 
-    @media (max-width:850px){
-      #title_mobile{
-        font-family: Arial, sans-serif;
+    #side_panel {
+      a {
+        font-family: "Montserrat Alternates", sans-serif;
         font-weight: 800;
-        text-align: left;
+        font-style: normal;
         text-decoration: none;
-        font-size: 5vw;
+        font-size: 3vw;
       }
-
-      #side_panel {
-        a{
-          font-family: "Montserrat Alternates", sans-serif;
-          font-weight: 800;
-          font-style: normal;
-          text-decoration: none;
-          font-size: 3vw;
-        }
-      }
-
     }
+
+  }
 
 }
 
-body{
-  h1{
+body {
+  h1 {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
     font-size: 4vw;
   }
-  h2,h3,h4,h5,p{
-      font-family: 'Montserrat Alternates', sans-serif;
-      font-weight: 600;
-      font-style: normal;
-      font-size: 2vw;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2vw;
   }
 
-  .prod_lab, .prod_lab_n, .prod_cat {
+  .prod_lab,
+  .prod_lab_n,
+  .prod_cat {
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 600;
     font-size: 1.1vw;
   }
-  .prod_lab_n{
+
+  .prod_lab_n {
     font-size: 1.5vw;
   }
-  .prod_cat{
+
+  .prod_cat {
     font-size: 0.8vw;
   }
 
-  .primary_button{
+  .primary_button {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
     font-size: 2vw;
 
   }
-  select{
+
+  select {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
     font-size: 1.4vw;
   }
 
-  label{
+  label {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin-left: 1.5vw;
   }
+
+  @media (max-width:850px) {
+    #page_title {
+      font-size: 6vw;
+    }
+  }
 }
 
-#homepage{
-  #new_print{
+#homepage {
+  #new_print {
     font-size: 4vw;
   }
-  #new_funky{
+
+  #new_funky {
     font-size: 4vw;
   }
-  #L_I_T, #T_S{
+
+  #L_I_T,
+  #T_S {
     font-size: 4vw;
   }
-  @media (max-width:850px){
+
+  @media (max-width:850px) {
     .prod_hp {
-      .prod_lab_n{
+      .prod_lab_n {
         font-size: 2.5vw;
       }
-      .prod_cat{
+
+      .prod_cat {
         font-size: 1.5vw;
       }
-      .prod_lab{
+
+      .prod_lab {
         font-size: 2vw;
       }
     }
   }
 }
 
-#profilePage{
+#profilePage {
 
-  #page_title{
+  #page_title {
     font-size: 4.5vw;
     font-family: Arial, Helvetica, sans-serif;
   }
-  input{
+
+  input {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
-  input::placeholder{
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  #FP,#CA {
+
+
+
+  #FP,
+  #CA {
     text-decoration: none;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
   }
+
+  @media (max-width:850px) {
+
+    #page_title {
+      font-size: 8vw;
+    }
+
+    h1 {
+      font-size: 5vw;
+    }
+
+    label {
+      font-size: 3.5vw;
+    }
+
+    input {
+      font-size: 3vw;
+    }
+
+    input::placeholder {
+      font-size: 3vw;
+    }
+
+    button {
+      font-size: 4vw;
+    }
+  }
 }
 
-#cartPage{
-  h2{
+#cartPage {
+  h2 {
     font-size: 2.5vw;
   }
-  #checkout_NA, #checkout_ok{
+
+  #checkout_NA,
+  #checkout_ok {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
     font-size: 2vw;
     text-decoration: none;
   }
-  #most_bought{
+
+  #most_bought {
     font-size: 1.8vw;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
   }
-  h3{
+
+  h3 {
     font-size: 2vw;
   }
-  .cart_row{
-    input{
+
+  .cart_row {
+    input {
       font-family: "Montserrat Alternates", sans-serif;
       font-weight: 800;
       font-style: normal;
       font-size: 1.5vw;
     }
   }
-  #final_cost{
-    h3{
+
+  #final_cost {
+    h3 {
       font-family: "Montserrat Alternates", sans-serif;
       font-weight: 700;
       font-style: normal;
     }
   }
 
-
-}
-
-#prod_listing_page{
-  h3{
-    font-size: 1.5vw;
-  }
-  @media (max-width:850px){
-    h3{
-    font-size: 3vw;
-    }
-  .prod {
-    .prod_lab_n{
+  @media (max-width:850px) {
+    .prod_lab_n {
       font-size: 2.5vw;
     }
-    .prod_cat{
+
+    .prod_cat {
       font-size: 1.5vw;
     }
-    .prod_lab{
+
+    .prod_lab {
       font-size: 2vw;
-    }
     }
   }
 }
 
-#checkout_page{
-  h2{
+#prod_listing_page {
+  h3 {
+    font-size: 1.5vw;
+  }
+
+  @media (max-width:850px) {
+    h3 {
+      font-size: 3vw;
+    }
+
+    .prod {
+      .prod_lab_n {
+        font-size: 2.5vw;
+      }
+
+      .prod_cat {
+        font-size: 1.5vw;
+      }
+
+      .prod_lab {
+        font-size: 2vw;
+      }
+    }
+  }
+}
+
+#checkout_page {
+  h2 {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -258,16 +329,17 @@ body{
   }
 }
 
-.prod_pages{
+.prod_pages {
 
-  #below_prod{
-    #add_to_cart_disabled{
+  #below_prod {
+    #add_to_cart_disabled {
       font-family: "Montserrat Alternates", sans-serif;
       font-weight: 800;
       font-style: normal;
       font-size: 2vw;
     }
-    h3{
+
+    h3 {
       font-size: 1.3vw;
       font-family: "Montserrat Alternates", sans-serif;
       font-weight: 400;
@@ -275,11 +347,13 @@ body{
     }
 
   }
-  #review_section{
-    .review_name{
+
+  #review_section {
+    .review_name {
       font-size: 1.8vw;
     }
-    .review_text{
+
+    .review_text {
       font-family: "Montserrat Alternates", sans-serif;
       font-weight: 400;
       font-style: normal;
@@ -287,62 +361,119 @@ body{
     }
 
   }
-  .may_also_like{
-      h2{
-        font-family: "Montserrat Alternates", sans-serif;
-        font-weight: 800;
-        font-style: normal;
-      }
+
+  .may_also_like {
+    h2 {
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+    }
   }
 
-  @media (max-width:850px){
-    #product_name{
+  @media (max-width:850px) {
+    #product_name {
       font-size: 5vw;
     }
-    #product_price{
+
+    #product_price {
       font-size: 4vw;
     }
 
-    #below_prod{
+    #below_prod {
       justify-content: space-between;
-      #add_to_cart_disabled,#add_to_cart{
+
+      #add_to_cart_disabled,
+      #add_to_cart {
         font-size: 3vw;
       }
 
-      .side{
+      .side {
         font-size: 3vw;
       }
     }
-    #prod_text{
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+
+    #prod_text {
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 400;
+      font-style: normal;
     }
 
-    #review_section{
+    #review_section {
 
-      .review_name{
+      .review_name {
         font-size: 3vw;
       }
-      .review_text{
+
+      .review_text {
         font-size: 2.4vw;
       }
     }
-    .may_also_like{
-      h2{
+
+    .may_also_like {
+      h2 {
         font-size: 3.5vw;
       }
+
       .prod {
-        .prod_lab_n{
+        .prod_lab_n {
           font-size: 2.5vw;
         }
-        .prod_cat{
+
+        .prod_cat {
           font-size: 1.5vw;
         }
-        .prod_lab{
+
+        .prod_lab {
           font-size: 2vw;
         }
       }
+    }
+  }
+}
+
+#forgot_password {
+  #profile_email::placeholder {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @media (max-width:850px) {
+    h2 {
+      font-size: 4vw;
+    }
+
+    input {
+      font-size: 3.5vw;
+    }
+
+    input::placeholder {
+      font-size: 3.5vw;
+    }
+
+    button {
+      font-size: 4vw;
+    }
+  }
+
+}
+
+#create_account {
+  @media (max-width:850px) {
+    h2 {
+      font-size: 4vw;
+    }
+
+    input::placeholder {
+      font-size: 3.5vw;
+    }
+
+    button {
+      font-size: 4vw;
+    }
+
+    button {
+      font-size: 4vw;
     }
   }
 }
