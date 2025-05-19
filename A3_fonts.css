@@ -152,6 +152,20 @@ body {
     #page_title {
       font-size: 6vw;
     }
+
+    .prod {
+      .prod_lab_n {
+        font-size: 4vw;
+      }
+
+      .prod_cat {
+        font-size: 2vw;
+      }
+
+      .prod_lab {
+        font-size: 3vw;
+      }
+    }
   }
 }
 
@@ -172,18 +186,19 @@ body {
   @media (max-width:850px) {
     .prod_hp {
       .prod_lab_n {
-        font-size: 2.5vw;
+        font-size: 4vw;
       }
 
       .prod_cat {
-        font-size: 1.5vw;
+        font-size: 2vw;
       }
 
       .prod_lab {
-        font-size: 2vw;
+        font-size: 3vw;
       }
     }
   }
+
 }
 
 #profilePage {
@@ -280,16 +295,44 @@ body {
   }
 
   @media (max-width:850px) {
-    .prod_lab_n {
-      font-size: 2.5vw;
+    #subheadings {
+      h3 {
+        font-size: 3vw;
+      }
+
     }
 
-    .prod_cat {
-      font-size: 1.5vw;
+    #most_bought {
+      font-size: 5vw;
     }
 
-    .prod_lab {
-      font-size: 2vw;
+
+
+    #final_cost,
+    #postage {
+      h3 {
+        font-size: 3vw;
+      }
+    }
+
+    #checkout_buttons {
+      button {
+        font-size: 4vw;
+      }
+    }
+
+    .cart_row {
+      select {
+        font-size: 2.5vw;
+      }
+
+      input {
+        font-size: 2.5vw;
+      }
+
+      p {
+        font-size: 3vw;
+      }
     }
   }
 }
@@ -304,19 +347,7 @@ body {
       font-size: 3vw;
     }
 
-    .prod {
-      .prod_lab_n {
-        font-size: 2.5vw;
-      }
 
-      .prod_cat {
-        font-size: 1.5vw;
-      }
-
-      .prod_lab {
-        font-size: 2vw;
-      }
-    }
   }
 }
 
@@ -326,6 +357,27 @@ body {
     font-weight: 800;
     font-style: normal;
     font-size: 2.5vw;
+  }
+
+  @media (max-width:850px) {
+
+    #card_num,
+    #card_name,
+    #email_deets,
+    #number_deets,
+    #address,
+    #card_ex,
+    #card_cvc {
+      font-size: 3vw;
+    }
+
+    h2 {
+      font-size: 5vw;
+    }
+
+    button {
+      font-size: 3vw;
+    }
   }
 }
 
@@ -414,19 +466,7 @@ body {
         font-size: 3.5vw;
       }
 
-      .prod {
-        .prod_lab_n {
-          font-size: 2.5vw;
-        }
 
-        .prod_cat {
-          font-size: 1.5vw;
-        }
-
-        .prod_lab {
-          font-size: 2vw;
-        }
-      }
     }
   }
 }
@@ -472,8 +512,34 @@ body {
       font-size: 4vw;
     }
 
+  }
+}
+
+#confirmation_page {
+  p {
+    font-size: 1.5vw;
+  }
+
+  @media (max-width:850px) {
+    h1 {
+      font-size: 10vw;
+    }
+
+    h2 {
+      font-size: 5vw;
+    }
+
+    p {
+      font-size: 4vw;
+    }
+
     button {
       font-size: 4vw;
     }
+
+    h3 {
+      font-size: 5vw;
+    }
+
   }
 }

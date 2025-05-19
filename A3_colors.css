@@ -28,6 +28,7 @@ header {
 }
 
 body {
+    background-color: #a3d1db;
 
     h1 {
         color: #142d33;
@@ -159,6 +160,11 @@ body {
         color: #9eadb1;
     }
 
+    #checkout_NA {
+
+        background-color: #64838a;
+    }
+
     #checkout_ok {
         background-color: #142d33;
     }
@@ -199,4 +205,10 @@ body {
         background-color: #64838a;
     }
 
+}
+
+#checkout_page {
+    #border_vert {
+        border: #395e66 solid 0.25vw;
+    }
 }

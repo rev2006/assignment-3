@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const menuButton = document.getElementById('menu_button');
     const sidePanel = document.getElementById('side_panel');
+    //opening and closing side menu
     menuButton.addEventListener('click', () =>
         sidePanel.classList.toggle('open'));
 
@@ -23,9 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //scrolling
 
     //scrolling homepage items
-    // const photoContainer = document.getElementById('photos_list');
-    // const photos = photoContainer.querySelectorAll('img');
-    // const scrollAm = photos[0].offsetWidth;
     const scrollLIT = document.getElementById('LIT_items');
     const scrollTS = document.getElementById('TS_items');
     const scrollAm = 300;
@@ -77,9 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
-
-
-
     //product page
     //add to cart disabled
     if(document.body.classList.contains("prod_pages")){
@@ -112,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const desktopTextDiv = document.getElementById("desktop_text");
         
         let prodText= document.getElementById("prod_text").textContent;
-
+        //remove and add descrptive text based on desktop or mobile resolution, since text location is different
         function updateProdText(descText){
             const ogText = document.getElementById("prod_text");
             if (ogText) ogText.remove();
@@ -155,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const prodInCartDiv = document.getElementById("prods_in_cart");
 
-
+        // if cart is NOT empty, then show/hide these
         if (cart.length>0){
             checkoutNA.style.display = "none";
             checkoutOK.style.display = "block";
@@ -164,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
             postage.style.display = "flex";
             finalCost.style.display = "block";
         }
+        // if cart is IS empty, then show/hide these
         else{
             checkoutNA.style.display = "block";
             checkoutOK.style.display = "none";
@@ -224,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemAmm = document.createElement("input");
             itemAmm.type = "number";
             itemAmm.value = 1;
-            itemAmm.style.width = "4vw";
+
 
             const unitPrice = item[2];
 
@@ -269,14 +265,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         }
-
-        // if (cart.length>0){
-        //     itemAmm.addEventListener("click", function(){
-
-        //     })
-        // }
-
-        totalPrice.textContent = "$" + totalCost.toFixed(2);
+        // total price of cart
+        totalPrice.textContent = "$" + (totalCost+5.5).toFixed(2);
     }
 
 
