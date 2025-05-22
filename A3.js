@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-//header
+    //header
 
-//mobile side panel
+    //mobile side panel
 
     const menuButton = document.getElementById('menu_button');
     const sidePanel = document.getElementById('side_panel');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeMenu = document.getElementById('closeMenu');
     closeMenu.addEventListener('click', () =>
-    sidePanel.classList.remove('open'));
+        sidePanel.classList.remove('open'));
 
 
 
@@ -33,18 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < leftButtons.length; i++) {
         leftButtons[i].addEventListener("click", () => {
             if (i === 0) {
-                scrollLIT.scrollBy({left: -scrollAm, behavior: "smooth"});
+                scrollLIT.scrollBy({ left: -scrollAm, behavior: "smooth" });
             } else {
-                scrollTS.scrollBy({left: -scrollAm, behavior: "smooth"});
+                scrollTS.scrollBy({ left: -scrollAm, behavior: "smooth" });
             }
         });
     }
     for (let i = 0; i < rightButtons.length; i++) {
         rightButtons[i].addEventListener("click", () => {
             if (i === 0) {
-                scrollLIT.scrollBy({left: scrollAm, behavior: "smooth"});
+                scrollLIT.scrollBy({ left: scrollAm, behavior: "smooth" });
             } else {
-                scrollTS.scrollBy({left: scrollAm, behavior: "smooth"});
+                scrollTS.scrollBy({ left: scrollAm, behavior: "smooth" });
             }
         });
     }
@@ -54,18 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < leftButtons.length; i++) {
         leftButtons[i].addEventListener("click", () => {
             if (i === 0) {
-                scrollProd.scrollBy({left: -scrollAm, behavior: "smooth"});
+                scrollProd.scrollBy({ left: -scrollAm, behavior: "smooth" });
             } else {
-                scrollReviews.scrollBy({left: -scrollAm, behavior: "smooth"});
+                scrollReviews.scrollBy({ left: -scrollAm, behavior: "smooth" });
             }
         });
     }
     for (let i = 0; i < rightButtons.length; i++) {
         rightButtons[i].addEventListener("click", () => {
             if (i === 0) {
-                scrollProd.scrollBy({left: scrollAm, behavior: "smooth"});
+                scrollProd.scrollBy({ left: scrollAm, behavior: "smooth" });
             } else {
-                scrollReviews.scrollBy({left: scrollAm, behavior: "smooth"});
+                scrollReviews.scrollBy({ left: scrollAm, behavior: "smooth" });
             }
         });
     }
@@ -77,49 +77,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //product page
     //add to cart disabled
-    if(document.body.classList.contains("prod_pages")){
+    if (document.body.classList.contains("prod_pages")) {
         const sizeSelect = document.getElementById("size");
         const addButton = document.getElementById("add_to_cart");
         const addButtonDisabled = document.getElementById("add_to_cart_disabled");
 
-        sizeSelect.addEventListener("change", function(){
-            if (sizeSelect.value !== ""){
+        sizeSelect.addEventListener("change", function () {
+            if (sizeSelect.value !== "") {
                 addButton.style.display = "block";
                 addButtonDisabled.style.display = "none";
             }
         });
-    
+
         //adding to cart
         // information of required products
-        addButton.addEventListener("click", function(){
+        addButton.addEventListener("click", function () {
             let productImage = document.getElementById("product_pic").src;
             let productName = product_name.textContent;
             let price_str = product_price.textContent;
             let productPrice = parseFloat(price_str.replace("$", ""));
             let productSize = document.getElementById("size").value;
             //add values to array
-            cart.push([productImage,productName, productPrice, productSize]);
+            cart.push([productImage, productName, productPrice, productSize]);
 
             localStorage.setItem("cart", JSON.stringify(cart));
-        } );
+        });
 
         const mobileTextDiv = document.getElementById("mobile_text");
         const desktopTextDiv = document.getElementById("desktop_text");
-        
-        let prodText= document.getElementById("prod_text").textContent;
+
+        let prodText = document.getElementById("prod_text").textContent;
         //remove and add descrptive text based on desktop or mobile resolution, since text location is different
-        function updateProdText(descText){
+        function updateProdText(descText) {
             const ogText = document.getElementById("prod_text");
             if (ogText) ogText.remove();
 
             let newH3 = document.createElement("h3");
-            newH3.textContent= prodText;
-            newH3.id= "prod_text";
+            newH3.textContent = prodText;
+            newH3.id = "prod_text";
 
-            if (descText.matches){
+            if (descText.matches) {
                 mobileTextDiv.appendChild(newH3);
             }
-            else{
+            else {
                 desktopTextDiv.appendChild(newH3);
             }
         }
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //cart page
-    if(document.body.id === "cartPage"){
+    if (document.body.id === "cartPage") {
         const cartEmptyText = document.getElementById("empty_cart");
         const checkoutNA = document.getElementById("checkout_NA");
         const checkoutOK = document.getElementById("checkout_ok");
@@ -147,11 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const finalCost = document.getElementById("final_cost");
 
         const totalPrice = document.getElementById("total_cost");
+        const xIconPath = './Icons%20%26%20elements/X_icon.png';
 
         const prodInCartDiv = document.getElementById("prods_in_cart");
 
         // if cart is NOT empty, then show/hide these
-        if (cart.length>0){
+        if (cart.length > 0) {
             checkoutNA.style.display = "none";
             checkoutOK.style.display = "block";
             cartEmptyText.style.display = "none";
@@ -160,18 +161,18 @@ document.addEventListener('DOMContentLoaded', () => {
             finalCost.style.display = "block";
         }
         // if cart is IS empty, then show/hide these
-        else{
+        else {
             checkoutNA.style.display = "block";
             checkoutOK.style.display = "none";
             cartEmptyText.style.display = "block";
             subHeadings.style.display = "none";
-            postage.style.display= "none";
+            postage.style.display = "none";
             finalCost.style.display = "none";
         }
 
-        let totalCost =0;
+        let totalCost = 0;
         //add products to cart
-        for(let i=0; i<cart.length; i++){
+        for (let i = 0; i < cart.length; i++) {
             const item = cart[i];
 
             const cartRow = document.createElement("div");
@@ -181,8 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const prodCont = document.createElement("div");
             prodCont.classList.add("prod_info");
             prodCont.style.width = "20%";
-            
-                    
+
+
             const itemImg = document.createElement("img");
             itemImg.src = item[0];
             itemImg.style.width = "100%";
@@ -245,28 +246,65 @@ document.addEventListener('DOMContentLoaded', () => {
             cartRow.appendChild(amountDiv);
             const priceDiv = document.createElement("div");
             priceDiv.classList.add("prod_price");
-        
+
             // product price
             const itemPrice = document.createElement("p");
             totalCost += item[2];
-            itemPrice.textContent = "$" + item[2];  
-        
+            itemPrice.textContent = "$" + item[2];
+
             priceDiv.appendChild(itemPrice);
             cartRow.appendChild(priceDiv);
 
+            //X button
+            const XDiv = document.createElement("div");
+            const Ximg = document.createElement("img");
+            Ximg.className = "XButton";
+            Ximg.src = xIconPath;
+            Ximg.style.cursor = "pointer";
+            Ximg.style.border = "none";
+
+            XDiv.appendChild(Ximg);
+            cartRow.appendChild(XDiv);
+
+
+            //remove button functionality
+            Ximg.addEventListener("click", () => {
+                cartRow.remove();
+                if (miniDiv) miniDiv.remove();
+
+                cart = cart.filter(c => !(c[0] === item[0] && c[1] === item[1])); 
+
+                // Update localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                // Recalculate total
+                let newTotal = 0;
+                const allRows = document.querySelectorAll(".cart_row");
+                allRows.forEach((row, index) => {
+                    const qtyInput = row.querySelector("input[type='number']");
+                    const qty = parseInt(qtyInput.value) || 0;
+                    const pricePerUnit = cart[index]?.[2] || 0;
+                    newTotal += qty * pricePerUnit;
+                });
+
+                totalPrice.textContent = "$" + newTotal.toFixed(2);
+            });
+
             //border
-            if (i !==0){
-                const miniDiv = document.createElement("div");
-                miniDiv.id = 'border_light_H';
+            let miniDiv = null;
+            if (i !== 0) {
+                miniDiv = document.createElement("div");
+                miniDiv.classList.add("border_light_H");
                 prodInCartDiv.appendChild(miniDiv);
             }
+
 
             prodInCartDiv.appendChild(cartRow);
 
 
         }
         // total price of cart
-        totalPrice.textContent = "$" + (totalCost+5.5).toFixed(2);
+        totalPrice.textContent = "$" + (totalCost + 5.5).toFixed(2);
     }
 
 
@@ -275,4 +313,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    });
+});

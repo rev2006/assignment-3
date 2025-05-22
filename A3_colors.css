@@ -181,6 +181,10 @@ body {
 
     }
 
+    .border_light_H {
+        border: #395e66 solid 0.25vw;
+    }
+
     @media (max-width:850px) {
         .cart_row {
             img {
@@ -208,6 +212,7 @@ body {
 }
 
 #checkout_page {
+
     #border_vert {
         border: #395e66 solid 0.25vw;
     }
