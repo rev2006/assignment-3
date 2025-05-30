@@ -12,7 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMenu = document.getElementById('closeMenu');
     closeMenu.addEventListener('click', () =>
         sidePanel.classList.remove('open'));
+    document.addEventListener('click', (e) => {
+        const isClickInsidePanel = sidePanel.contains(e.target);
+        const isClickOnMenuButton = menuButton.contains(e.target);
 
+        if (!isClickInsidePanel && !isClickOnMenuButton) {
+            sidePanel.classList.remove('open');
+        }
+    });
 
 
 
@@ -272,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cartRow.remove();
                 if (miniDiv) miniDiv.remove();
 
-                cart = cart.filter(c => !(c[0] === item[0] && c[1] === item[1])); 
+                cart = cart.filter(c => !(c[0] === item[0] && c[1] === item[1]));
 
                 // Update localStorage
                 localStorage.setItem("cart", JSON.stringify(cart));

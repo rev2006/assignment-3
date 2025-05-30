@@ -47,7 +47,6 @@ header {
   #nav_link>a {
     display: flex;
     align-items: center;
-    margin: 1vw;
 
   }
 
@@ -123,6 +122,11 @@ header {
         img {
           width: 4vw;
         }
+      }
+
+      #side_panel.open {
+        display: flex;
+        left: 0;
       }
 
       a {
