@@ -421,8 +421,14 @@ body {
       font-style: normal;
     }
   }
+  label{
+    font-size: 1.5vw;
+  }
 
   @media (max-width:850px) {
+    label{
+      font-size: 3vw;
+    }
     #product_name {
       font-size: 5vw;
     }
@@ -439,8 +445,8 @@ body {
         font-size: 3vw;
       }
 
-      .side {
-        font-size: 3vw;
+      select{
+        font-size: 1.7vw;
       }
     }
 
@@ -467,6 +473,16 @@ body {
       }
 
 
+    }
+  }
+  @media (min-width:851px){
+    #above_prod{
+      h1{
+        font-size: 6vw;
+      }
+      h2{
+        font-size: 2vw;
+      }
     }
   }
 }
