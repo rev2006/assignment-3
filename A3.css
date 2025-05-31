@@ -1211,35 +1211,6 @@ body {
     display: block;
   }
 
-  /* #below_prod {
-      display: flex;
-      align-items: center;
-      margin-top: 3vw;
-      margin-bottom: 3vw;
-      margin-left: 10vw;
-      justify-content: space-between;
-
-
-      .side_button {
-        position: relative;
-      }
-
-
-
-
-      #size {
-        width: 6vw;
-      }
-
-      #prod_text {
-        margin: 2vw;
-        text-align: center;
-        width: 40vw;
-        margin-left: 6vw;
-
-      }
-
-    } */
 
   @media (max-width:850px) {
 

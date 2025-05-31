@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
     //home page 
 
     //scrolling
@@ -80,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //intialize array of products in cart to local storage. ensures data is stored on browser, hence isnt lost on reload or page change
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 
 
     //product page
@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const totalPrice = document.getElementById("total_cost");
         const xIconPath = './Icons%20%26%20elements/X_icon.png';
+
 
         const prodInCartDiv = document.getElementById("prods_in_cart");
 
