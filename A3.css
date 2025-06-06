@@ -1304,6 +1304,8 @@ body {
 
 
   @media (min-width:851px) {
+
+
     #prod_layout {
       display: flex;
       flex-direction: row;
@@ -1333,6 +1335,7 @@ body {
     }
 
     #below_prod {
+      width: 15vw;
       flex-direction: column;
       gap: 1vw;
 
@@ -1352,6 +1355,8 @@ body {
 
       button {
         margin-top: 2vw;
+        margin-left: 0vw;
+       
       }
     }
   }
